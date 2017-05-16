@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site blog
-title: shuizyBlog
+title: muggle
 subtitle: blog websit
 description: blog websit
 author: shuizhenyang
@@ -60,6 +60,11 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
