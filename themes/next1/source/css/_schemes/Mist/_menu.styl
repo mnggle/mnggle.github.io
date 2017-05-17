@@ -18,23 +18,29 @@
   br { display: none; }
 
   .menu-item {
-    margin: 0;
+    margin:50px 0;
     +mobile() { display: block; }
   }
 
   .menu-item a {
-    padding: 0 20px;
+    padding: 0 30px;
     background: none;
     border: none;
     //border-radius: 2px;
     color:#cdcdcd;
     transition-property: background;
+    font-size:14px;
+
+    transition:all .5s;
+    -moz-transition:all .5s; /* Firefox 4 */
+    -webkit-transition:all .5s; /* Safari and Chrome */
+    -o-transition:all .5s; /* Opera */
 
     +mobile() {
       text-align: left;
     }
 
-    &:hover { background: #e1e1e1;color:#171717 }
+    &:hover {color:#FF5E4C }
   }
 
   a::before {
