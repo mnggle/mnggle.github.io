@@ -1,5 +1,4 @@
 <div class="site-brand-wrapper">
-
   <div class="site-nav-toggle">
     <button>
       <span class="btn-bar"></span>
@@ -8,8 +7,7 @@
     </button>
   </div>
 </div>
-<div id="s-canvas">
-</div>
+
 <nav class="site-nav">
   {% set hasSearch = theme.swiftype_key || theme.algolia_search.enable || theme.tinysou_Key || theme.local_search.enable %}
 

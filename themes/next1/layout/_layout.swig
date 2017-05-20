@@ -10,14 +10,16 @@
   <style>
     #s-canvas{
       position: relative;
-      height: 336px;
+      /*height: 336px;*/
+      display: inline-block;
+      margin: 0 auto;
     }
-    #s-canvas canvas{
+/*    #s-canvas canvas{
       position: absolute;
       top:0;
       left: 50%;
       margin-left: -500px;
-    }
+    }*/
   </style>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
@@ -36,6 +38,8 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+<!--     <div id="s-canvas">
+    </div> -->
       <div class="header-inner"> {%- include '_partials/s-header.swig' %} </div>
     </header>
 
@@ -100,15 +104,15 @@
       }.bind(this),
       frequency
     )
-    let c1 = createCanvas({width: 1000, height: 336})
-    let c2 = createCanvas({width: 1000, height: 336})
-    let c3 = createCanvas({width: 1000, height: 336})
+    let c1 = createCanvas({width: $('.header-inner').width(), height: $('.header-inner').height()})
+    let c2 = createCanvas({width: $('.header-inner').width(), height: $('.header-inner').height()})
+    let c3 = createCanvas({width: $('.header-inner').width(), height: $('.header-inner').height()})
 
     let tela   = c1.canvas;
     let canvas = c1.context;
 
     // $("body").append(tela);
-    $("#s-canvas").append(c3.canvas);
+    $(".site-nav").before(c3.canvas);
     writeText(c2.canvas, c2.context, "SHUIZHENY\nGITHUB\nBLOG")
 
 
@@ -120,7 +124,7 @@
         this.y = options.y
         this.s = (3 + Math.random());
         this.a = 0
-        this.w = 1000
+        this.w = $(window).width()
         this.h = 336
         this.radius = 0.5 + Math.random()*20
         this.color  = this.radius > 5 ? "#FF5E4C" : "#ED413C" //this.randomColor()
@@ -206,8 +210,8 @@
     function popolate(){
       particles.push(
         new Particle(canvas,{
-          x: (1000/2),
-          y: (336/2)
+          x: ($('.header-inner').width()/2.2),
+          y: ($('.header-inner').height()/2)
         })
       )
       return particles.length

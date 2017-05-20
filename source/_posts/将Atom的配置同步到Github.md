@@ -33,6 +33,7 @@ Atom这么多的自定义内容，万一哪天电脑一睡不醒，和自己磨�
 3. 生成的Token序列最好记一下，下次在另一台电脑上获取备份配置的时候需要用到。不记也没关系， 可以重新生成。
 ![](http://oq6xfel71.bkt.clouddn.com/17-5-19/28127175-file_1495205833776_143a1.png)
 4. 创建后会有生成token 序列，将他复制到sync-settings插件设置的Person Access Token输入框中。
+
 ##### 获取Gist Id：
 1. 在github中创建一个gist，如图所示，点击生成之后将生成的gistId复制到sync-settings插件设置的gist id输入框中。
 ![](http://oq6xfel71.bkt.clouddn.com/17-5-19/66274249-file_1495206602160_ce12.png)

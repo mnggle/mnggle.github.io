@@ -5,7 +5,7 @@
   //padding: 100px 0 100px;
   background-size:100%;
   padding-top:50px;
-  height:400px;
+  height:300px;
   clearfix();
 
   +mobile() {
@@ -14,7 +14,11 @@
     padding: 10px;
   }
 }
-
+.header-inner canvas{
+    +mobile() {
+      display:none;
+  }
+}
 .site-meta {
   //float: left;
   //margin-left: -20px;
