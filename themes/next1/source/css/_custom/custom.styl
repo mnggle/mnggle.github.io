@@ -55,3 +55,53 @@
   .logo-line-before i { left: -100%; }
   .logo-line-after i { right: -100%; }
 }
+// Menu
+// --------------------------------------------------
+.site-nav-toggle {
+  position: static;
+  float: right;
+}
+.menu {
+  //float: right;
+  margin: 8px 0 0 0;
+
+  +mobile() {
+    margin: 20px 0 0 0;
+    padding: 0;
+  }
+
+  br { display: none; }
+
+  .menu-item {
+    +mobile() { display: block; }
+  }
+
+  .menu-item a {
+    padding: 0 15px;
+    background: none;
+    border: none;
+    //border-radius: 2px;
+    color:#cdcdcd;
+    transition-property: background;
+    font-size:14px;
+
+    transition:all .5s;
+    -moz-transition:all .5s; /* Firefox 4 */
+    -webkit-transition:all .5s; /* Safari and Chrome */
+    -o-transition:all .5s; /* Opera */
+
+    +mobile() {
+      text-align: left;
+    }
+
+    &:hover {color:#FF5E4C }
+  }
+
+  a::before {
+      display: none;
+
+      +mobile() { display: block; }
+    }
+
+  +mobile() { float: none; }
+}

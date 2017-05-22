@@ -21,6 +21,7 @@
       margin-left: -500px;
     }*/
   </style>
+  <link href='http://cdn.webfont.youziku.com/webfonts/nomal/103028/47551/5922fa01f629d8184042bc0b.css' rel='stylesheet' type='text/css' />
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
 </head>
@@ -95,6 +96,7 @@
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
   <script>
+    "use strict";
     let particles = [];
     let frequency = 20
     // Popolate particles
@@ -179,7 +181,7 @@
 
     function writeText(canvas, context, text){
       let size = 80
-      context.font = size + "px Montserrat";
+      context.font = size + "px 'Montserrat-Semiad5c9dd9a19274'";
       context.fillStyle = "#111111";
       context.textAlign = "center";
       let lineheight = 60
