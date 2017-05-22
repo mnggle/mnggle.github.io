@@ -95,6 +95,7 @@
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
   <script>
+    "use strict";
     let particles = [];
     let frequency = 20
     // Popolate particles
