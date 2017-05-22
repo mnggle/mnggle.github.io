@@ -95,7 +95,6 @@
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
   <script>
-    "use strict";
     let particles = [];
     let frequency = 20
     // Popolate particles
@@ -179,11 +178,11 @@
     }
 
     function writeText(canvas, context, text){
-      let size = 100
+      let size = 80
       context.font = size + "px Montserrat";
       context.fillStyle = "#111111";
       context.textAlign = "center";
-      let lineheight = 70
+      let lineheight = 60
       let lines = text.split('\n');
       for(let i = 0; i<lines.length; i++){
         context.fillText(lines[i], canvas.width/2, canvas.height/2 + lineheight*i - (lineheight*(lines.length-1))/3);
