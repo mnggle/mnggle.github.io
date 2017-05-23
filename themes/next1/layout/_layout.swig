@@ -20,8 +20,11 @@
       left: 50%;
       margin-left: -500px;
     }*/
+    
   </style>
-  <link href='http://cdn.webfont.youziku.com/webfonts/nomal/103028/47551/5922fa01f629d8184042bc0b.css' rel='stylesheet' type='text/css' />
+   <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Montserrat">
+ <!--  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600"> -->
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
 </head>
@@ -181,7 +184,7 @@
 
     function writeText(canvas, context, text){
       let size = 80
-      context.font = size + "px 'Montserrat-Semiad5c9dd9a19274'";
+      context.font = size + "px Montserrat";
       context.fillStyle = "#111111";
       context.textAlign = "center";
       let lineheight = 60
@@ -195,7 +198,7 @@
       c3.context.drawImage(c2.canvas, 0, 0, c2.canvas.width, c2.canvas.height);
       c3.context.globalCompositeOperation = 'source-atop';
       c3.context.drawImage(c1.canvas, 0, 0);
-      blur(c1.context,c1.canvas, 2)
+      blur(c1.context,c1.canvas, 4)
     }
 
     function blur(ctx,canvas, amt) {
