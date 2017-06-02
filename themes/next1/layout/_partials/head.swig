@@ -1,6 +1,7 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/103481/28713/593122a5f629d80b3c0c20cd.css' rel='stylesheet' type='text/css' />
 
 
 {% if theme.han %}
@@ -120,5 +121,4 @@
 {% if theme.canonical %}
   <link rel="canonical" href="{{ config.url }}/{{ page.canonical_path.replace('index.html', '') }}"/>
 {% endif %}
-
 {% include 'head/custom-head.swig' %}

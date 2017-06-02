@@ -8,6 +8,14 @@
   </div>
 </div>
 
+<div class="info">
+  <h4><a href="#category">FRONT-END</a></h4>
+  <h1>SHUIZHENYANG GITHUB BOLG</h1>
+  <div class="meta">
+    <a href="javascript:" target="_b" class="author"></a><br> By <a href="https://github.com/mnggle" target="_b">ShuiZhenyang</a> on Jun 02, 2017
+  </div>
+</div>
+
 <nav class="site-nav">
   {% set hasSearch = theme.swiftype_key || theme.algolia_search.enable || theme.tinysou_Key || theme.local_search.enable %}
 
@@ -17,9 +25,6 @@
         {% set itemName = name.toLowerCase() %}
         <li class="menu-item menu-item-{{ itemName }}">
           <a href="{{ url_for(path) }}" rel="section">
-            {% if theme.menu_icons.enable %}
-              <i class="menu-item-icon fa fa-fw fa-{{theme.menu_icons[itemName] | default('question-circle') | lower }}"></i> <br />
-            {% endif %}
             {{ __('menu.' + name) }}
           </a>
         </li>
@@ -33,7 +38,6 @@
             <a href="javascript:;" class="popup-trigger">
           {% endif %}
             {% if theme.menu_icons.enable %}
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             {% endif %}
             {{ __('menu.search') }}
           </a>
