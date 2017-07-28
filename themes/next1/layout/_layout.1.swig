@@ -22,8 +22,8 @@
 //     }*/
     
 //   </style>
-   <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Montserrat">
+{#    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Montserrat"> #}
  <!--  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600"> -->
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>

@@ -3,7 +3,9 @@ title: vue2边学边用之“.sync ”修饰符
 date: 2017-07-26 22:37:32
 tags: vuejs 知识点 总结
 ---
-
+![](http://oq6xfel71.bkt.clouddn.com/17-7-29/36373046.jpg)
+<center> <font size=4>相比angularjs，vue的学习曲线真的是如丝一般润滑。</font></center >
+<!-- more -->
 由于公司需要将原来使用anuglar的项目改为使用vue，最近一直忙于对于vue的学习和使用，相比angularjs，vue的学习曲线真的是如丝一般润滑。故想在边学边用之余总结一些开发过程中遇到的问题和get到的点。这次分享的是 `.sync` 修饰符。
 
 首先来一张官方文档的截图：
@@ -12,8 +14,9 @@ tags: vuejs 知识点 总结
 
 从上图的介绍中我们可以得知， `.sync` 修饰符是为了能让`prop`实现双向绑定，在开发过程中，由于组件的复用，很多时候确实需要从子组件中获取数据。而官方文档又规定`prop`是单项绑定的，即父组件属性发生变化，将传导给子组件，但是不会反过来。如demo所示:
 
-**父组件代码：**
 
+```
+		<!-- 父组件代码 -->
 		<template>
 			<div class="parent">
 		  <child :testValue="testValue"></child>
@@ -38,9 +41,11 @@ tags: vuejs 知识点 总结
 		}
 		
 		</script>
+```
 
-**子组件代码：**
-	
+
+```	
+		<!-- 子组件代码： -->
 		<template>
 			<div class="child">
 		      <input type="text" name="" v-model="testValue">
@@ -62,7 +67,7 @@ tags: vuejs 知识点 总结
 		}
 
 		</script>
-
+```
 ![](http://oq6xfel71.bkt.clouddn.com/17-7-26/93780721.jpg)
 
 按照上述写法，在input中输入值不仅无法实现双向数据绑定，在控制台也会报错：
@@ -70,8 +75,8 @@ tags: vuejs 知识点 总结
 
 这是由于vue不允许你直接改变`prop`的值，想要改变必须在父组件中加入`.sync`修饰符，并且当子组件想要更新`prop`时，需要显式地触发一个事件demo如下：
 
-**父组件代码：**
-
+```
+	<!-- 父组件代码 -->
 	<template>
 		<div class="parent">
 	  <child :testValue.sync="testValue"></child>
@@ -96,9 +101,9 @@ tags: vuejs 知识点 总结
 	}
 	
 	</script>
-
-**子组件代码：**
-
+```
+```
+	<!-- 子组件代码 -->
 	<template>
 		<div class="child">
 	      <input type="text" name="" :value="testValue" @input="changeTest">
@@ -124,25 +129,29 @@ tags: vuejs 知识点 总结
 	}
 	
 	</script>
+```
 如此就将子组件的属性变化传递给了父组件。然而事情还没完。在原来的基础上将传递的值改为一个对象的时候：
 
-**父组件代码：**
 
+```
+	<!-- 父组件代码 -->
 	<template>
 		<div class="parent">
 	  <child :testObj="testObj"></child>
 	  <p>{{testObj.message}}</p>
 		</div>
 	</template>
+```
 
-**子组件代码：**
 
+```
+	<!-- 子组件代码 -->
 	<template>
 		<div class="child">
 	      <input type="text" name="" v-model="testObj.message">
 		</div>
 	</template>
-
+```
 ![](http://oq6xfel71.bkt.clouddn.com/17-7-26/48945219.jpg)
 
 父组件并没有使用`.sync`修饰符，子组件也没有显式地提交一个事件，但是改变输入框的内容，父组件也发生了变化。说好的单向绑定，单向数据流呢。
