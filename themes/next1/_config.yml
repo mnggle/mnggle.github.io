@@ -314,8 +314,8 @@ disqus:
 #hypercomments_id:
 
 # Gentie productKey
-gentie_productKey: 84272d3918e34b72ba5e2dff097b26dd
-
+# gentie_productKey: 84272d3918e34b72ba5e2dff097b26dd
+disqus_shortname: muggle
 # changyan
 changyan:
   enable: false

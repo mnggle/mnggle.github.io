@@ -74,5 +74,5 @@ theme: next1
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:mnggle/mnggle.github.io.git
+  repo: https://github.com/mnggle/mnggle.github.io.git
   branch: master
