@@ -3,9 +3,12 @@ title: 将Atom的配置同步到Github
 date: 2017-05-20 00:15:41
 tags:
 ---
+![](http://oq6xfel71.bkt.clouddn.com/17-10-3/77941060.jpg)
+
+<center> <font size=4>配置不能同步？每次都是最熟悉的陌生人</font></center >
 
 Atom这么多的自定义内容，万一哪天电脑一睡不醒，和自己磨合了很久的自定义内容也就一睡不醒了。本文就来介绍一下如何将Atom的配置同步到Github上。
-
+<!-- more -->
 #### 1、安装sync-settings插件
 - 命令行安装: `$ apm install sync-settings`
 - 设置中心: 搜索`sync-settings`
