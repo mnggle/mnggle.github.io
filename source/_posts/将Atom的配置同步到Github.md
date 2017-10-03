@@ -1,7 +1,8 @@
 ---
 title: 将Atom的配置同步到Github
 date: 2017-05-20 00:15:41
-tags:
+tags: 教程
+categories: Atom
 ---
 ![](http://oq6xfel71.bkt.clouddn.com/17-10-3/77941060.jpg)
 

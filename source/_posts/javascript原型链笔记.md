@@ -1,7 +1,8 @@
 ---
 title: javascript原型链笔记
 date: 2017-09-22 11:49:30
-tags:
+tags: javascript 笔记 原理
+categories: javascript
 ---
 ![](http://oq6xfel71.bkt.clouddn.com/17-10-3/50610144.jpg)
 <center> <font size=4>只停留在会用的层面，这比纯理论来的更可怕</font></center >

@@ -1,7 +1,8 @@
 ---
 title: vue2边学边用之“.sync ”修饰符
 date: 2017-07-26 22:37:32
-tags: vuejs 知识点 总结
+tags: 开发总结
+categories: vue.js
 ---
 ![](http://oq6xfel71.bkt.clouddn.com/17-7-29/36373046.jpg)
 <center> <font size=4>相比angularjs，vue的学习曲线真的是如丝一般润滑。</font></center >

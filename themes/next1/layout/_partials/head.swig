@@ -1,9 +1,6 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<link href='http://cdn.webfont.youziku.com/webfonts/nomal/103481/28713/593122a5f629d80b3c0c20cd.css' rel='stylesheet' type='text/css' />
-
-
 {% if theme.han %}
   {% set Han_uri = url_for(theme.vendors._internal + '/Han/dist/han.min.css?v=3.3') %}
   {% if theme.vendors.Han %}
@@ -11,7 +8,6 @@
   {% endif %}
   <link rel="stylesheet" media="all" href="{{ Han_uri }}">
 {% endif %}
-
 
 {# #238, Disable Baidu tranformation #}
 <meta http-equiv="Cache-Control" content="no-transform" />
